@@ -62,13 +62,13 @@ const App = () => {
         <input
           className="userInput"
           type="text"
-          placeholder="Buscar por"
+          placeholder="Search for"
           onChange={(e) => {
             setSearch(e.target.value);
           }}
         />
         <button className="searchButton" onClick={makeSearch}>
-          Pesquisar
+          Search{" "}
         </button>
       </div>
       {user && (
@@ -99,7 +99,7 @@ const App = () => {
           <div className="profileContent">
             <div className="repositories ">
               {repositories?.map((repo) => (
-                <Repository user={user} repo={repo} key={repo.id}/>
+                <Repository user={user} repo={repo} key={repo.id} />
               ))}
             </div>
           </div>
