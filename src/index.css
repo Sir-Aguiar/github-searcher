@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#root {
+  height: 100%;
+  min-height: 100vh;
+}
+.userInput {
+  @apply p-1 border-2 outline-none border-gray-300
+}
+
+.searchButton {
+  @apply mx-2 p-1 px-2 rounded-md border-2 bg-red-500 text-slate-200
+}
+
+.profileContainer {
+  @apply flex-1 flex flex-col my-2 p-2 
+}
+
+.profileHeader {
+  @apply mx-32 mobile:mx-0 tablet:mx-1 laptop:mx-10 xsm:mx-0   p-2 rounded-md grid grid-cols-4 grid-rows-2 gap-1 mobile:grid-cols-2 mobile:grid-rows-4 xsm:grid-cols-2 xsm:grid-rows-4
+}
+.userProfile {
+  @apply flex flex-col items-start col-span-2 row-span-2 mobile:col-span-2 mobile:row-span-2 mobile:items-center
+}
+.profileInfoItem{
+  @apply row-span-2 col-span-1 text-xl text-center flex flex-col justify-center
+}
+.navigation {
+  @apply col-span-2 shadow-[0_2px_4px_-1px_rgba(0,0,0,0.3),0_-2px_4px_-1px_rgba(0,0,0,0.3)] rounded-md flex items-center justify-around
+}
+.navigation span {
+  @apply text-blue-700 hover:text-blue-900 cursor-pointer text-lg transition-colors
+}
+.profileContent {
+  @apply mx-32 mobile:mx-0 tablet:mx-1 laptop:mx-10 xsm:mx-0 flex flex-1
+}
+.repositories {
+  @apply bg-slate-400 flex-1 overflow-y-auto p-1 max-h-screen
+}
+.repository {
+  @apply border-2 border-purple-800 px-2 py-4 my-2 grid grid-cols-2 grid-rows-1
+}
+.repository h1 {
+  @apply text-lg mobile:text-base
+}
+.gitIcons {
+  @apply flex flex-row justify-center items-center
+}
+.gitIcons span {
+  @apply flex flex-row items-center text-lg mx-1 
+}
+.gitIcons svg {
+  @apply cursor-pointer hover:text-blue-800
+}
+.moreInfos {
+  @apply max-h-0 row-span-1 col-span-2 p-1 transition-all overflow-hidden
+}
+.moreInfos.active {
+  @apply max-h-96
+}
+.moreHeader {
+  @apply flex flex-col items-center
+}
+.topics {
+  @apply flex flex-row flex-wrap
+}
+.topic {
+  @apply m-2 px-2 py-1 bg-red-400 rounded-xl text-lg 
+}
