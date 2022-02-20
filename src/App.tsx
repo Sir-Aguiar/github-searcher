@@ -99,7 +99,7 @@ const App = () => {
           <div className="profileContent">
             <div className="repositories ">
               {repositories?.map((repo) => (
-                <Repository user={user} repo={repo} />
+                <Repository user={user} repo={repo} key={repo.id}/>
               ))}
             </div>
           </div>
